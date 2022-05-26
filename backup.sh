@@ -35,22 +35,22 @@ backupFileName="backup-[$currentTS].tar.gz"
 # To make things easier, we will define some useful variables...
 
 # [TASK 5]
-origAbsPath=`/home/project`
+origAbsPath=`pwd`
 
 # [TASK 6]
-cd # <-
-destDirAbsPath=`/home/project/destination`
+cd destinationDirectory # <-
+destDirAbsPath=`pwd`
 
 # [TASK 7]
-cd /home/project # <-
-cd /home/project/destination # <-
+cd origAbsPath # <-
+cd destDirAbsPath # <-
 
 # [TASK 8]
 yesterdayTS=$(($currentTS - 24 * 60 * 60))
 
 declare -a toBackup
 
-for file in $(ls -al) # [TASK 9]
+for file in $(ls -a) # [TASK 9]
 do
   # [TASK 10]
   if ((`date -r $file +%s` > $yesterdayTS))
