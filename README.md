@@ -1,1 +1,1 @@
-# learning_git
+# Shell scripting project Coursera
