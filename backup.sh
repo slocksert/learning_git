@@ -1,3 +1,9 @@
+#How to use:
+#./backup.sh arg1 arg2
+#arg1 -> the file you want to backup
+#arg2 -> the destination you want it to go
+
+
 # This checks if the number of arguments is correct
 # If the number of arguments is incorrect ( $# != 2) print error message and exit
 if [[ $# != 2 ]]
